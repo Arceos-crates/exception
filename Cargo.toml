@@ -1,10 +1,9 @@
-[package]
-name = "arceos-exception"
-version = "0.1.0"
-edition = "2021"
-authors = ["Yuekai Jia <equation618@gmail.com>"]
+[workspace]
+resolver = "2"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+members = [
+    "apps/exception",
+]
 
-[dependencies]
-axstd = { git = "https://github.com/Arceos-crates/axstd.git", optional = true }
+[profile.release]
+lto = true
